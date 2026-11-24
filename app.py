@@ -12,7 +12,7 @@ from tkinter import filedialog, messagebox, ttk
 class VideoConverterApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Video Converter 480p x264 (Original Name & Subtitle Safe)")
+        self.root.title("diarverter — Video Converter 480p x264")
         self.root.geometry("900x700")
         self.root.minsize(800, 600)
 
@@ -59,7 +59,7 @@ class VideoConverterApp:
         header_frame = ttk.Frame(main_frame)
         header_frame.pack(fill=tk.X, pady=(0, 10))
 
-        ttk.Label(header_frame, text="🎬 Video Converter 480p x264", style='Header.TLabel').pack(side=tk.LEFT)
+        ttk.Label(header_frame, text="🎬 diarverter", style='Header.TLabel').pack(side=tk.LEFT)
         ttk.Label(header_frame, text="Nama Asli Tetap • Subtitle Aman • Auto 480p", style='Subheader.TLabel').pack(side=tk.LEFT, padx=10, pady=5)
 
         # Folder Selection Frame
@@ -87,7 +87,7 @@ class VideoConverterApp:
         ttk.Label(settings_frame, text="Preset Encoder:").grid(row=1, column=0, sticky=tk.W, pady=4, padx=4)
         preset_combo = ttk.Combobox(settings_frame, textvariable=self.preset_var, values=["fast", "medium", "slow"], width=8, state="readonly")
         preset_combo.grid(row=1, column=1, sticky=tk.W, pady=4, padx=4)
-        ttk.Label(settings_frame, text="(medium = seimbang kecepatan & kompresi)").grid(row=1, column=2, sticky=tk.W, padx=4)
+        ttk.Label(settings_frame, text="(medium = seimbang kecepatan & kompresi)").grid(row=1, column=1, sticky=tk.W, padx=4)
 
         ttk.Label(settings_frame, text="Format Output:").grid(row=2, column=0, sticky=tk.W, pady=4, padx=4)
         ext_combo = ttk.Combobox(settings_frame, textvariable=self.output_ext_var, values=[".mkv", ".mp4"], width=8, state="readonly")
